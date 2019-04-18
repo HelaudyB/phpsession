@@ -9,5 +9,5 @@ var_dump($session);
 */
 $sessiondeux =new Session();
 var_dump($sessiondeux);
-$sessiondeux->name="sessionname";
-echo $sessiondeux->name;
+$sessiondeux->username="elodie";
+echo $sessiondeux->username;

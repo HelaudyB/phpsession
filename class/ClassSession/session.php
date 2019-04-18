@@ -44,11 +44,14 @@ class Session{
     // créer une fonction magique __set
     public function __set($nouveauAttribut, $value)
     {
-        $this->add($nouveauAttribut, $value);
-        echo 'cet attribut n\'existe pas.';
+    var_dump('je passe là');
     }
     public function __get($value) {
         echo('impossible d\'afficher la valeur');
+    }
+
+    public function remove(){
+
     }
 
 
