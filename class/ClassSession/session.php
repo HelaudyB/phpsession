@@ -1,59 +1,36 @@
 <?php
-class Session{
-    public $attribut = [];
-    public $key;
-    public $value;
-    /**
-     * @return array
-     */
-    public function getAttribut()
-    {
-        return $this->attribut;
-    }
+class Session {
+    private $attributs=[];
+
 
     /**
-     * @return mixed
+     * Session constructor.
+     * @param array $attributs
      */
-    public function getKey()
+    public function __construct(array $attributs)
     {
-        return $this->key;
+       /* $this->attributs = $attributs;
+        foreach (){
+
+        }*/
     }
 
     /**
-     * @return mixed
-     */
-    public function getValue()
-    {
-        return $this->value;
-    }
-    // créer une fonction add
-    public function add($key, $value){
-        $this->attribut[$key]=$value;
-    }
-
-    // créer une fonction update
-    public function update($key, $value){
-        return $this->add($key, $value);
-    }
-
-    //créer une fonction magique __isset
-    public function __isset($nouveauAttribut)
-    {
-        return isset($this->attribut[$nouveauAttribut]);
-    }
-    // créer une fonction magique __set
-    public function __set($nouveauAttribut, $value)
-    {
-    var_dump('je passe là');
-    }
-    public function __get($value) {
-        echo('impossible d\'afficher la valeur');
-    }
-
-    public function remove(){
-
-    }
-
-
+ * @return mixed
+ */
+public function getAttributs()
+{
+    return $this->attributs;
+}/**
+ * @param mixed $attributs
+ */
+public function setAttributs($attributs)
+{
+    $this->attributs = $attributs;
+}
+public function __set($name, $value)
+{
+   return->$this->attributs;
+}
 
 }
